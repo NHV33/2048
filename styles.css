@@ -1,0 +1,171 @@
+body {
+    background-color: darkblue;
+}
+
+dialog {
+    background-color: black;
+    width: 80vw;
+}
+
+#dialog-content {
+    text-align: center;
+    top: 3vmin;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.button {
+    /* width: 10px; */
+    padding: 2vmin;
+    margin: 1vmin;
+    margin-top: 2vmin;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    color: white;
+    font-family: monospace;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+::backdrop {
+    background-color: black;
+    opacity: 0.75;
+  }
+
+#main {
+    height: 90vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: monospace;
+    font-size: 8vmin;
+    margin: 1vmin;
+}
+
+h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 5vmin;
+    margin: 1vmin;
+}
+
+table {
+    margin-top: 1vmin;
+    border-spacing: 0; /* Removes the cell spacing via CSS */ 
+    border-collapse: collapse;
+}
+
+.grid-square {
+    padding: 1.5vmin;
+    border: solid white;
+    border-width: 1px;
+}
+
+.number {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-family: monospace;
+    /* font-size: 7vmin; */
+    width: 11vmin;
+    height: 11vmin;
+    /* background-color: #000; */
+    border-style: outset;
+    border-width: 1.5vmin;
+    border-radius: 10px;
+    opacity: 100%;
+    user-select: none;
+}
+
+#info {
+    margin-bottom: 1vmin;
+    padding: 1vmin;
+    border: solid white;
+    border-width: 1px;
+    color: white;
+    font-size: 3.5vmin;
+    font-family: monospace;
+    text-align: center;
+    opacity: 0%;
+}
+
+#score-box {
+    width: 71vmin;
+    margin: 1vmin;
+    padding: 1vmin;
+    border: solid white;
+    border-width: 1px;
+    color: white;
+    font-size: 4vmin;
+    font-family: monospace;
+    /* text-align: left; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#score {
+    padding-left: 2vmin;
+}
+
+
+
+@keyframes spawnAnimation {
+    from {transform: scale(0%);}
+    to {transform: scale(100%);}
+}
+
+@keyframes fadeInAnimation {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes fadeOutAnimation {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+.spawn {
+    animation: spawnAnimation 0.2s linear 0s normal none;
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.2s linear 0s normal forwards;
+}
+
+.fade-out {
+    animation: fadeOutAnimation 0.2s linear 0s normal forwards;
+}
+
+._0    { opacity: 0%; }
+._2    { --color: hsl(0  , 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._4    { --color: hsl(21 , 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._8    { --color: hsl(42 , 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._16   { --color: hsl(64 , 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._32   { --color: hsl(85 , 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._64   { --color: hsl(106, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 7vmin;}
+._128  { --color: hsl(127, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 6vmin;}
+._256  { --color: hsl(149, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 6vmin;}
+._512  { --color: hsl(170, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 6vmin;}
+._1024 { --color: hsl(191, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 5vmin;}
+._2048 { --color: hsl(213, 100%, 44%); background-color: var(--color); border-color: var(--color); font-size: 5vmin;} 
